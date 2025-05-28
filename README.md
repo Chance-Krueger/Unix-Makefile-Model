@@ -14,10 +14,10 @@ C program extending mymake to mimic the Unix make utility by parsing dependency 
 
 ## How To run it:
 ### Compile the program using a C compiler, for example:
-    - gcc mymake2.c graph.c -o mymake2
+    - gcc UnixMakefileModel.c graph.c -o UnixMakefileModel
 
 ### Run the executable from the command line:
-    ./mymake2 [-f aMakefile] [aTarget]
+    ./UnixMakefileModel [-f aMakefile] [aTarget]
 
     - -f aMakefile is optional; if omitted, it uses the default myMakefile.
     - aTarget is optional; if omitted, it uses the first target in the makefile.
@@ -30,9 +30,9 @@ C program extending mymake to mimic the Unix make utility by parsing dependency 
     - If no commands run, it prints "target is up to date."
 
 ## Example usages:
-    - ./mymake2 -f customMakefile clean
-    - ./mymake2 all -f customMakefile
-    - ./mymake2
+    - ./UnixMakefileModel -f customMakefile clean
+    - ./UnixMakefileModel all -f customMakefile
+    - ./UnixMakefileModel
         - assuming that myMakefile is made
 
 ## Future Improvements
