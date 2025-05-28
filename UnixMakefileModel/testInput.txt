@@ -1,0 +1,19 @@
+log.o :log.c log.h
+	gcc log.c -c
+doop.out : log.o doop.c file.o
+	gcc log.o doop.c file.o -o doop.out
+file.o : file.c
+	gcc file.c -c
+catch.o : log.o catch.c catch.h
+	gcc log.o catch.c -c
+doop2.out : doop2.c file.o catch.o
+	gcc file.o doop2.c catch.o -o doop2.out
+all : doop.out doop2.out
+	
+rundoop : doop.out
+	echo ./doop.out
+rundoop2 : doop2.out
+	echo ./doop2.out
+run : doop.out doop2.out
+	echo ./doop.out
+	echo ./doop2.out

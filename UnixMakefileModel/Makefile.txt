@@ -1,0 +1,12 @@
+UnixMakefileModel: UnixMakefileModel.o parseMakeFile.o parseTargetFile.o
+	gcc -Wall -g UnixMakefileModel.o parseMakeFile.o parseTargetFile.o -o UnixMakefileModel
+
+UnixMakefileModel.o: UnixMakefileModel.c
+	gcc -Wall -g -c UnixMakefileModel.c -o UnixMakefileModel.o
+
+parseMakeFile.o: parseMakeFile.c
+	gcc -Wall -g -c parseMakeFile.c -o parseMakeFile.o
+
+parseTargetFile.o: parseTargetFile.c
+	gcc -Wall -g -c parseTargetFile.c -o parseTargetFile.o
+
